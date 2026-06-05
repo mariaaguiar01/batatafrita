@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // var_dump($_POST);
     // var_dump("INSERT INTO itens (nome, categoria, quantidade, valor, checkin) VALUES ('{$_POST['nome']}','{$_POST['categoria']}',{$_POST['quantidade']},{$_POST['valor']},{$_POST['checkin']})");
     // exit;
+    $_POST['checkin']=$_POST['checkin']=='on';
     $_POST['valor'] = str_replace(',', '.', $_POST['valor']);
     $conexao->query("INSERT INTO itens (nome, categoria, quantidade, valor, checkin) VALUES ('{$_POST['nome']}','{$_POST['categoria']}',{$_POST['quantidade']},{$_POST['valor']},{$_POST['checkin']})");
 }
