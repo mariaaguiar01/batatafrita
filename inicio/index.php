@@ -26,7 +26,7 @@
                 <input type="number" class="form-control" id="valor">
             </div>
             <div class="mb-3 form-check">
-                <input type="number" class="form-check-input" id="checkin">
+                <input type="checkbox" class="form-check-input" id="checkin">
                 <label for="checkin" class="form-check-label">Checkin</label>
             </div>
             <div class="mb-3">
