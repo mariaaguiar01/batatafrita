@@ -23,7 +23,7 @@
             </div>
             <div class="mb-3">
                 <label for="valor" class="form-label">Valor</label>
-                <input type="number" class="form-control" id="valor">
+                <input type="number" step="0.01" class="form-control" id="valor">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="checkin">
