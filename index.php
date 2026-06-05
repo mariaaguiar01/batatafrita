@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <form>
+            <form method="get" action="inicio">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Login</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -27,31 +27,7 @@
             </form>
         </div>
         <!-- Content here -->
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Banheiro</th>
-                    <th scope="col">Cozinha</th>
-                    <th scope="col">Lavanderia</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Desinfetante</td>
-                    <td>Detergente</td>
-                    <td>Sabonete</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Alvejante</td>
-                    <td>Alface</td>
-                    <td>Sabão líquido</td>
-                </tr>
-
-            </tbody>
-        </table>
+ 
     </div>
 
 </body>
