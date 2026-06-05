@@ -2,7 +2,8 @@
 require_once '../database/conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $conexao->query("INSERT INTO itens (nome, categoria, quantidade, valor, checkin) VALUES ('{$_POST['nome']}', '{$_POST['categoria']}',{$_POST['quantidade']}, {$_POST['valor']}, {$_POST['checkin']})");
+    $_POST['valor'] = str_replace(',', '.', $_POST['valor']);
+    $conexao->query("INSERT INTO itens (nome, categoria, quantidade, valor, checkin) VALUES ('{$_POST['nome']}','{$_POST['categoria']}',{$_POST['quantidade']},{$_POST['valor']},{$_POST['checkin']})");
 }
 
 $resultados = "";
