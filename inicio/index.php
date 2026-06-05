@@ -21,6 +21,55 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
 
 <body>
     <div class="container">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastro">
+            Botão
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cadastro" tabindex="-1" aria-labelledby="cadastrotitle" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cadastrotitle">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantidade" class="form-label">Quantidade</label>
+                                <input type="number" class="form-control" id="quantidade">
+                            </div>
+                            <div class="mb-3">
+                                <label for="valor" class="form-label">Valor</label>
+                                <input type="number" step="0.01" class="form-control" id="valor">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="checkin">
+                                <label for="checkin" class="form-check-label">Checkin</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <select class="form-select" id="categoria">
+                                    <option selected>Selecione a Categoria</option>
+                                    <option value="banheiro">Banheiro</option>
+                                    <option value="cozinha">Cozinha</option>
+                                    <option value="lavanderia">Lavanderia</option>
+                                    <option value="area externa">Area externa</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <form>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
