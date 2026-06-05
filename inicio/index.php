@@ -11,7 +11,31 @@
 
 <body>
     <div class="container">
-       
+        <form>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome">
+
+            </div>
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade">
+            </div>
+            <div class="mb-3">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="number" class="form-control" id="valor">
+            </div>
+            <div class="mb-3">
+                <label for="checkin" class="form-label">Checkin</label>
+                <input type="number" class="form-control" id="checkin">
+            </div>
+            <div class="mb-3">
+                <label for="categoria" class="form-label">Categoria</label>
+                <input type="checkbox" class="form-control" id="categoria">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
         <!-- Content here -->
         <table class="table">
             <thead>
