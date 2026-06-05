@@ -1,6 +1,10 @@
 <?php
 require_once '../database/conexao.php';
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $conexao->query("INSERT INTO itens (nome, categoria, quantidade, valor, checkin) VALUES ('{$_POST['nome']}', '{$_POST['categoria']}',{$_POST['quantidade']}, {$_POST['valor']}, {$_POST['checkin']})");
+}
+
 $resultados = "";
 foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado) {
     $linha = " <tr><td>{$resultado['id']}</td><td>{$resultado['nome']}</td><td>{$resultado['quantidade']}</td><td>{$resultado['categoria']}</td><td>{$resultado['valor']}</td><td>{$resultado['checkin']}</td></tr>";
@@ -35,7 +39,7 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form method="post" action="/">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
                                 <input type="text" class="form-control" id="nome">
@@ -70,7 +74,7 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
                 </div>
             </div>
         </div>
-               <!-- Content here -->
+        <!-- Content here -->
         <table class="table">
             <thead>
                 <tr>
