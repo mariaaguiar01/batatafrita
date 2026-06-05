@@ -1,3 +1,14 @@
+<?php
+require_once '../database/conexao.php';
+
+$resultados = "";
+foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado) {
+
+    $linha = " <tr><td>{$resultado['id']}</td><td>{$resultado['nome']}</td><td>{$resultado['quantidade']}</td><td>{$resultado['categoria']}</td><td>{$resultado['valor']}</td><td>{$resultado['checkin']}</td></tr>";
+    $resultados .= $linha;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt_BR">
 
@@ -46,26 +57,16 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Quantidade</th>
-                    <th scope="col">Banheiro</th>
-                    <th scope="col">Cozinha</th>
-                    <th scope="col">Lavanderia</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Checkin</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Desinfetante</td>
-                    <td>Detergente</td>
-                    <td>Sabonete</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Alvejante</td>
-                    <td>Alface</td>
-                    <td>Sabão líquido</td>
-                </tr>
-
+                <?= $resultados ?>
             </tbody>
         </table>
     </div>
