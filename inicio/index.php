@@ -25,13 +25,19 @@
                 <label for="valor" class="form-label">Valor</label>
                 <input type="number" class="form-control" id="valor">
             </div>
-            <div class="mb-3">
-                <label for="checkin" class="form-label">Checkin</label>
-                <input type="number" class="form-control" id="checkin">
+            <div class="mb-3 form-check">
+                <input type="number" class="form-check-input" id="checkin">
+                <label for="checkin" class="form-check-label">Checkin</label>
             </div>
             <div class="mb-3">
                 <label for="categoria" class="form-label">Categoria</label>
-                <input type="checkbox" class="form-control" id="categoria">
+                <select class="form-select" id="categoria">
+                    <option selected>Selecione a Categoria</option>
+                    <option value="banheiro">Banheiro</option>
+                    <option value="cozinha">Cozinha</option>
+                    <option value="lavanderia">Lavanderia</option>
+                    <option value="area externa">Area externa</option>
+                </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Salvar</button>
