@@ -70,38 +70,7 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
                 </div>
             </div>
         </div>
-        <form>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome">
-
-            </div>
-            <div class="mb-3">
-                <label for="quantidade" class="form-label">Quantidade</label>
-                <input type="number" class="form-control" id="quantidade">
-            </div>
-            <div class="mb-3">
-                <label for="valor" class="form-label">Valor</label>
-                <input type="number" step="0.01" class="form-control" id="valor">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="checkin">
-                <label for="checkin" class="form-check-label">Checkin</label>
-            </div>
-            <div class="mb-3">
-                <label for="categoria" class="form-label">Categoria</label>
-                <select class="form-select" id="categoria">
-                    <option selected>Selecione a Categoria</option>
-                    <option value="banheiro">Banheiro</option>
-                    <option value="cozinha">Cozinha</option>
-                    <option value="lavanderia">Lavanderia</option>
-                    <option value="area externa">Area externa</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Salvar</button>
-        </form>
-        <!-- Content here -->
+               <!-- Content here -->
         <table class="table">
             <thead>
                 <tr>
