@@ -47,24 +47,23 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
                         <form method="post" action="/inicio">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome">
-
+                                <input type="text" class="form-control" id="nome" name="nome">
                             </div>
                             <div class="mb-3">
                                 <label for="quantidade" class="form-label">Quantidade</label>
-                                <input type="number" class="form-control" id="quantidade">
+                                <input type="number" class="form-control" id="quantidade" name="quantidade">
                             </div>
                             <div class="mb-3">
                                 <label for="valor" class="form-label">Valor</label>
-                                <input type="number" step="0.01" class="form-control" id="valor">
+                                <input type="number" step="0.01" class="form-control" id="valor" name="valor">
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="checkin">
+                                <input type="checkbox" class="form-check-input" id="checkin" name="checkin">
                                 <label for="checkin" class="form-check-label">Checkin</label>
                             </div>
                             <div class="mb-3">
                                 <label for="categoria" class="form-label">Categoria</label>
-                                <select class="form-select" id="categoria">
+                                <select class="form-select" id="categoria" name="categoria">
                                     <option selected>Selecione a Categoria</option>
                                     <option value="banheiro">Banheiro</option>
                                     <option value="cozinha">Cozinha</option>
