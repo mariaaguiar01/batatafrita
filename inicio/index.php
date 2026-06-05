@@ -39,7 +39,7 @@ foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="/">
+                        <form method="post" action="/inicio">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
                                 <input type="text" class="form-control" id="nome">
