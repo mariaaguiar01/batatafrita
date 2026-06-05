@@ -3,7 +3,6 @@ require_once '../database/conexao.php';
 
 $resultados = "";
 foreach ($conexao->query("SELECT * FROM itens", \PDO::FETCH_ASSOC) as $resultado) {
-
     $linha = " <tr><td>{$resultado['id']}</td><td>{$resultado['nome']}</td><td>{$resultado['quantidade']}</td><td>{$resultado['categoria']}</td><td>{$resultado['valor']}</td><td>{$resultado['checkin']}</td></tr>";
     $resultados .= $linha;
 }

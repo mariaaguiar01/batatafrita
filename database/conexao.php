@@ -1,3 +1,3 @@
 <?php
-
-$conexao = new \PDO('sqlite:database.db');
+$dsn = __DIR__.'/database.db';
+$conexao = new \PDO('sqlite:'.$dsn);
